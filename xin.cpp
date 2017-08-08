@@ -5,6 +5,8 @@ using namespace std;
 //#define REDIS_HOST "127.0.0.1"
 //#define REDIS_PORT 6379
 const char* REDIS_HOST = "127.0.0.1";
+
+
 const int REDIS_PORT = 6379;
 
 int main()
@@ -22,13 +24,21 @@ int main()
 	r = (redisReply*)redisCommand(c, cmd1);
 	if(!r)
 	{
+<<<<<<< HEAD
 		cout<< "redis command error1" <<endl;
+=======
+		cout<< "redis command error" <<endl;
+>>>>>>> 276d6074a985fb9d6f55c04da21dceceed3df1e8
 		redisFree(c);
 		return -1;
 	}
 	if(r->type == REDIS_REPLY_ERROR)
 	{
+<<<<<<< HEAD
 		cout<< "redis command error2" <<endl;
+=======
+		cout<< "redis command error" <<endl;
+>>>>>>> 276d6074a985fb9d6f55c04da21dceceed3df1e8
 		freeReplyObject(r);
 		redisFree(c);
 		return -1;
@@ -37,13 +47,21 @@ int main()
 	r = (redisReply*)redisCommand(c, cmd2);
 	if(!r)
 	{
+<<<<<<< HEAD
 		cout<< "redis command error3" <<endl;
+=======
+		cout<< "redis command error" <<endl;
+>>>>>>> 276d6074a985fb9d6f55c04da21dceceed3df1e8
 		redisFree(c);
 		return -1;
 	}
 	if(r->type == REDIS_REPLY_ERROR)
 	{
+<<<<<<< HEAD
 		cout<< "redis command error4" <<endl;
+=======
+		cout<< "redis command error" <<endl;
+>>>>>>> 276d6074a985fb9d6f55c04da21dceceed3df1e8
 		freeReplyObject(r);
 		redisFree(c);
 		return -1;
